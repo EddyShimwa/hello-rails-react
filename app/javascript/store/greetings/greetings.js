@@ -20,6 +20,5 @@ export default (state = initialState, action) => {
 export const fetchGreeting = createAsyncThunk(FETCH, async () => {
   const response = await fetch(API_URL);
   const data = await response.json();
-  console.log(data);
   return data.greeting;
 });

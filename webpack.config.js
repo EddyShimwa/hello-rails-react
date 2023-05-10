@@ -1,16 +1,16 @@
-const path = require("path");
-const webpack = require("webpack");
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  mode: "production",
-  devtool: "source-map",
+  mode: 'production',
+  devtool: 'source-map',
   entry: {
-    application: "./app/javascript/application.js"
+    application: './app/javascript/application.js',
   },
   output: {
-    filename: "[name].js",
-    sourceMapFilename: "[file].map",
-    path: path.resolve(__dirname, "app/assets/builds"),
+    filename: '[name].js',
+    sourceMapFilename: '[file].map',
+    path: path.resolve(__dirname, 'app/assets/builds'),
   },
   module: {
     rules: [
@@ -18,17 +18,17 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
             presets: [
               [
-                "@babel/preset-env",
+                '@babel/preset-env',
                 {
-                  useBuiltIns: "usage",
+                  useBuiltIns: 'usage',
                   corejs: 3,
                 },
               ],
-              "@babel/preset-react",
+              '@babel/preset-react',
             ],
           },
         },

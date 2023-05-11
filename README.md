@@ -103,8 +103,9 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd PocketPal
+  cd hello-rails-react
   gem install
+  npm install
 ```
 
 ### Usage

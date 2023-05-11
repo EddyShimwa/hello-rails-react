@@ -3,5 +3,5 @@
 require 'faker'
 
 5.times do
-  Message.create(content: Faker::Lorem.sentence)
+  Greeting.create(name: Faker::Lorem.sentence)
 end
